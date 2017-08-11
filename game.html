@@ -1,0 +1,157 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tetris5</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<meta name="viewport" content="initial-scale=1,user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link type="text/css" rel="stylesheet" href="css/com.css" />
+	<link type="text/css" rel="stylesheet" href="css/game.css" />
+</head>
+<body>
+	<div id="cubeFrame"><!-- 主视图 -->
+		<div id="cubeReel"><!-- 滚动块 -->
+			<div id="cubeHelp"><!-- 帮助块 -->
+				<h1>Help</h1>
+				<div id="helpContent">
+					<h4>About:</h4>
+					<p>This is a tetris game based on <a href="http://en.wikipedia.org/wiki/JavaScript" target="_blank">javascript</a> and <a href="http://en.wikipedia.org/wiki/HTML5" target="_blank">HTML5</a> technology and <strong>NO</strong> <a href="http://en.wikipedia.org/wiki/Adobe_Flash" target="_blank">flash</a> is using.<br />
+					<a href="http://sourceforge.net/p/tetris5/" target="_blank">tetris5</a> is on <a href="http://sourceforge.net/" target="_blank">sourceforge.net</a>. License: GPL2.<br />
+					Copyright (c) 2011- <a href="http://sunblog.72pines.com" target="_blank">SUN Junwen</a> sunjw8888(a)gmail.com<br />
+					Tetris © is a trademark of Tetris Holding.</p>
+					<br />
+					<h4>Controls:</h4>
+					<p>Use <strong>UP</strong>, <strong>DOWN</strong>, <strong>LEFT</strong> and <strong>RIGHT</strong> arrow key or <strong>W</strong>, <strong>A</strong>, <strong>S</strong> and <strong>D</strong> key to control block. <strong>X</strong> key will make block down to floor directly.<br />
+					Or you can click on the game to control. Click on <strong>Top</strong>, <strong>Left</strong>, <strong>Right</strong> and <strong>Buttom</strong> parts will move block as well as press keyboard.<br />
+					<br />Every button has a shortcut key which is the underline character on it.<br />
+					If you think the music is noisy, click "<strong>Mute</strong>" button.</p>
+					<br />
+					<h4>One more thing:</h4>
+					<p id="playedInfo">Tetris5 has been played  times.<br />
+					And totally scored  points.<br />
+					Just enjoy it!</p>
+				</div>
+				<div id="helpControl">
+					<div id="helpInfo">
+						iOS users use two fingers to scroll down or up.
+					</div>
+					<div class="button btnMenu">Back</div>
+					<div class="clear"></div>
+				</div>
+			</div><!-- 帮助块 -->
+			<div id="cubeRank"><!-- 排名块 -->
+				<h1>Rank</h1>
+				<div id="rankNav" class="right">
+				</div>
+				<div id="rankList">
+					<ul>
+						<li id="list1">
+							<div class="name">Name</div>
+							<div class="result">S: xxxx | L: xx | T: xxxxx s</div>
+						</li>
+						<li id="list2">
+							<div class="name">Name</div>
+							<div class="result">S: xxxx | L: xx | T: xxxxx s</div>
+						</li>
+						<li id="list3">
+							<div class="name"></div>
+							<div class="result"></div>
+						</li>
+						<li id="list4">
+							<div class="name">Name</div>
+							<div class="result">S: xxxx | L: xx | T: xxxxx s</div>
+						</li>
+						<li id="list5">
+							<div class="name">Name</div>
+							<div class="result">S: xxxx | L: xx | T: xxxxx s</div>
+						</li>
+					</ul>
+				</div>
+				<div id="rankControl">
+					<div id="rankInfo">
+						<!-- iOS users use two fingers to scroll down or up. -->
+					</div>
+					<div class="button btnMenu">Back</div>
+					<div class="clear"></div>
+				</div>
+			</div><!-- 排名块 -->
+			<div id="cubeMenu"><!-- 菜单块 -->
+				<header>
+					<h1>Tetris</h1>
+				</header>
+				<div id="menuLoading">
+					Loading...
+				</div>
+				<div id="menuControl">
+					<div id="btnRed" class="button btnStart"></div>
+					<div id="btnGreen" class="button btnPause"></div>
+					<div id="btnYellow" class="button btnRank"></div>
+					<div class="button btnHelp"></div>
+					<div class="button btnMute"></div>
+				</div>
+				<div class="clear"></div>
+			</div><!-- 菜单块 -->
+			<div id="cubeGame"><!-- 游戏块 -->
+				<div class="floatLeft">
+					<canvas id="canvasGame" width="180" height="360">
+					</canvas>
+				</div>
+				<!--<div class="floatLeft">
+					<div id="divGame"></div>
+				</div>-->
+				<div id="gameInfo" class="floatLeft center">
+					<div id="gameNextLabel" class="gameLabel">
+						Next:
+					</div>
+					<canvas id="canvasNext" width="72" height="36">
+					</canvas>
+					<div id="gameScoreLabel" class="gameLabel">
+						Score:
+					</div>
+					<div id="gameScore" class="gameText">
+					</div>
+					<div id="gameLevelLabel" class="gameLabel">
+						Level:
+					</div>
+					<div id="gameLevel" class="gameText">
+					</div>
+					<div id="gameTimeLabel" class="gameLabel">
+						Time:
+					</div>
+					<div id="gameTime" class="gameText">
+					</div>
+					<div id="gameControl">
+						<div class="button btnPause"></div>
+						<div class="button btnMute"></div>
+					</div>
+				</div>
+				<div class="clear"></div>
+			</div><!-- 游戏块 -->
+			<div class="clear"></div>
+		</div><!-- 滚动块 -->
+	</div><!-- 主视图 -->
+	<div id="debug">
+	
+	</div>
+	<div id="footer">
+		<div>
+			<a href="http://sunblog.72pines.com" target="_blank">SUN Junwen</a> 2011 | <a href="http://jsminnpp.sf.net" target="_blank">JSMinNpp</a> | <a href="http://rosefinch.sf.net" target="_blank">Rosefinch</a>
+		</div>
+	</div>
+	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery.color.js"></script>
+	<script type="text/javascript" src="js/modernizr-1.6.min.js"></script>
+	<script type="text/javascript" src="js/Block.js"></script>
+	<script type="text/javascript" src="js/Game.js"></script>
+	<script type="text/javascript" src="js/GameUI.js"></script>
+	<script type="text/javascript">
+	//<![CDATA[
+	$(function () {
+		var game = GameUI;
+		game.setAni(true);
+		game.init();
+	});
+	//]]>
+	</script>
+</body>
+</html>

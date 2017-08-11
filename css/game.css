@@ -1,0 +1,132 @@
+/*
+ * 基本颜色
+ * #3D95FF 基本蓝 
+ * #B2172F 基本红
+ * #1FC208 基本绿
+ * #FAB200 基本黄
+ * 渐变颜色
+ * #3D95FF -> #0143CF 蓝渐变
+ * #F4B3AB -> #B2172F 红渐变
+ * #1FC208 -> #328337 绿渐变
+ * #F7E3A1 -> #FAB200 黄渐变
+ * #aaa -> #111 黑渐变
+ * 阴影
+ * 45度 1-2px 的浅阴影
+ * box-shadow: 1px 1px 2px #ccc;
+ * text-shadow: 1px 1px 2px #ccc;
+ */
+#cubeGame {
+	/*border: black 1px solid;*/
+	width: 285px;
+	padding: 5px 0 1px 5px;
+	
+}
+
+#canvasGame {
+	border: 1px solid black;
+	border-radius: 5px;
+}
+#canvasGame, #divGame {
+	/*border: 1px solid black;*/
+}
+#divGame .block {
+	width: 17px;
+	height: 17px;
+	float: left;
+	background-color: black;
+	border-right: 1px solid #333;
+	border-bottom: 1px solid #333;
+}
+#divGame .block div {
+	width: 17px;
+	height: 17px;
+	border-radius: 1px;
+}
+#divGame .blockColor1 div, #divGame .blockColor2 div, #divGame .blockColor3 div, #divGame .blockColor4 div, #divGame .blockColor5 div {
+	box-shadow: 1px 1px 2px #999;
+}
+#divGame .blockColor1 div {
+	background: -moz-linear-gradient(top, #F4B3AB 0%, #B2172F 100%);
+	background: -webkit-linear-gradient(top, #F4B3AB 0%, #B2172F 100%);
+	background: -ms-linear-gradient(top, #F4B3AB 0%, #B2172F 100%);
+}
+#divGame .blockColor2 div {
+	background: -moz-linear-gradient(top, #F7E3A1 0%, #FAB200 100%);
+	background: -webkit-linear-gradient(top, #F7E3A1 0%, #FAB200 100%);
+	background: -ms-linear-gradient(top, #F7E3A1 0%, #FAB200 100%);
+}
+#divGame .blockColor3 div {
+	background: -moz-linear-gradient(top, #3D95FF 0%, #0143CF 100%);
+	background: -webkit-linear-gradient(top, #3D95FF 0%, #0143CF 100%);
+	background: -ms-linear-gradient(top, #3D95FF 0%, #0143CF 100%);
+}
+#divGame .blockColor4 div {
+	background: -moz-linear-gradient(top, #1FC208 0%, #328337 100%);
+	background: -webkit-linear-gradient(top, #1FC208 0%, #328337 100%);
+	background: -ms-linear-gradient(top, #1FC208 0%, #328337 100%);
+}
+#divGame .blockColor5 div {
+	background: -moz-linear-gradient(top, #aaa 0%, #111 100%);
+	background: -webkit-linear-gradient(top, #aaa 0%, #111 100%);
+	background: -ms-linear-gradient(top, #aaa 0%, #111 100%);
+}
+
+#gameInfo {
+	width: 100px;
+	font-size: 16px;
+}
+#gameInfo * {
+	margin: 3px 0;
+}
+#gameInfo * * {
+	margin: 0;
+}
+#gameInfo .gameLabel {
+	padding: 3px 0;
+	height: 18px;
+	line-height: 16px;
+	color: white;
+	box-shadow: 1px 1px 2px #ccc;
+}
+#gameInfo #gameNextLabel {
+	background: #3D95FF;
+	background: -moz-linear-gradient(top, #3D95FF 0%, #0143CF 100%);
+	background: -webkit-linear-gradient(top, #3D95FF 0%, #0143CF 100%);
+	background: -o-linear-gradient(top, #3D95FF 0%, #0143CF 100%);
+}
+#gameInfo #gameScoreLabel {
+	background: #B2172F;
+	background: -moz-linear-gradient(top, #F4B3AB 0%, #B2172F 100%);
+	background: -webkit-linear-gradient(top, #F4B3AB 0%, #B2172F 100%);
+	background: -o-linear-gradient(top, #F4B3AB 0%, #B2172F 100%);
+}
+#gameInfo #gameLevelLabel {
+	background: #1FC208;
+	background: -moz-linear-gradient(top, #1FC208 0%, #328337 100%);
+	background: -webkit-linear-gradient(top, #1FC208 0%, #328337 100%);
+	background: -o-linear-gradient(top, #1FC208 0%, #328337 100%);
+}
+#gameInfo #gameTimeLabel {
+	background: #FAB200;
+	background: -moz-linear-gradient(top, #F7E3A1 0%, #FAB200 100%);
+	background: -webkit-linear-gradient(top, #F7E3A1 0%, #FAB200 100%);
+	background: -o-linear-gradient(top, #F7E3A1 0%, #FAB200 100%);
+}
+#gameInfo .gameText {
+	height: 18px;
+	line-height: 18px;
+}
+#gameInfo #gameControl {
+	padding: 5px 0;
+}
+#gameInfo #gameControl button, #gameInfo #gameControl .button {
+	width: 70px;
+	height: 40px;
+	line-height: 40px;
+	margin: 3px auto;
+}
+
+#divControls {
+	text-align: center;
+	margin-top: 200px;
+}

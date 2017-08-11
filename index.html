@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <title>Tetris5</title>
+	<meta http-equiv="Content-type" content="text/html;charset=UTF-8" />
+	<meta http-equiv="Cache-control" content="no-store">
+	<meta http-equiv="Cache-control" content="no-cache">
+	<meta name="viewport" content="initial-scale=1,user-scalable=no" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<link type="text/css" rel="stylesheet" href="css/com.css" />
+	<link type="text/css" rel="stylesheet" href="css/game.css" />
+	<style type="text/css">
+	#cubeFrame {
+		display: none;
+	}
+	</style>
+</head>
+<body>
+	<div id="cubeFrame"><!-- 主视图 -->
+		<div id="cubeBrowser"><!-- 菜单块 -->
+			<div id="header">
+				<h1>Tetris</h1>
+			</div>
+			<div id="browserList">
+				<div id="browserInfo">
+					Your browser cannot run this game, please select a browser from the list below.<br />
+					Or you can play this game on your iPhone or Android mobile phone. 
+				</div>
+				<ul>
+					<li class="firefox">
+						<a href="http://www.mozilla.com" target="_blank">Mozilla Firefox 5</a>
+					</li>
+					<li class="chrome">
+						<a href="http://www.google.com/chrome" target="_blank">Google Chrome</a>
+					</li>
+					<li class="ie">
+						<a href="http://www.ie9.com/" target="_blank">Microsoft IE 9</a>
+					</li>
+					<li class="opera">
+						<a href="http://www.opera.com/" target="_blank">Opera</a>
+					</li>
+					<li class="safari">
+						<a href="http://www.apple.com/safari/" target="_blank">Apple Safari</a>
+					</li>
+				</ul>
+				<div class="clear"></div>
+			</div>
+			<div class="clear"></div>
+		</div><!-- 菜单块 -->
+	</div><!-- 主视图 -->
+	<script type="text/javascript" src="js/jquery-1.4.4.min.js"></script>
+	<script type="text/javascript" src="js/jquery.color.js"></script>
+	<script type="text/javascript" src="js/modernizr-1.6.min.js"></script>
+	<script type="text/javascript">
+	//<![CDATA[
+	function changeMarginTop() {
+		var elem = $("#cubeFrame");
+		var elemHeight = elem.height();
+		var windowHeight = $(window).height();
+		var marginTop = (windowHeight - elemHeight) / 3;
+		elem.css("margin-top", marginTop + "px");
+	}
+	
+	function showInfo() {
+		$("#cubeFrame").fadeIn();
+		
+		changeMarginTop();
+		$(window).resize(changeMarginTop);
+	}
+	
+	$(function () {
+		if (Modernizr.canvas && (!$.browser.firefox || ($.browser.firefox && $.browser.version[0] >= 4))) {
+			// 支持 Canvas
+			window.location.href = "game.html";
+			//showInfo();
+		} else {
+			showInfo();
+		}
+	});
+	//]]>
+	</script>
+</body>
+</html>

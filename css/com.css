@@ -1,0 +1,388 @@
+/*
+ * 基本颜色
+ * #3D95FF 基本蓝 
+ * #B2172F 基本红
+ * #1FC208 基本绿
+ * #FAB200 基本黄
+ * 渐变颜色
+ * #3D95FF -> #0143CF 蓝渐变
+ * #F4B3AB -> #B2172F 红渐变
+ * #1FC208 -> #328337 绿渐变
+ * #F7E3A1 -> #FAB200 黄渐变
+ * #aaa -> #111 黑渐变
+ * 阴影
+ * 45度 1-2px 的浅阴影
+ * box-shadow: 1px 1px 2px #ccc;
+ * text-shadow: 1px 1px 2px #ccc;
+ */
+* {
+	margin: 0;
+	padding: 0;
+}
+
+.clear {
+	clear: both;
+}
+.center {
+	text-align: center;
+}
+.left {
+	text-align: left;
+}
+.right {
+	text-align: right;
+}
+.floatLeft {
+	float: left;
+}
+.floatRight {
+	float: right;
+}
+
+.underline {
+	text-decoration: underline;
+}
+
+body {
+	
+}
+body, button, .button {
+	font-family: Ubuntu,Arial,Verdana,sans-serif;
+}
+
+ul {
+	list-style-type: none;
+}
+
+#cubeFrame {
+	height: 372px;
+	position: relative;
+	
+	margin-left: auto;
+	margin-right: auto;
+	overflow: hidden;
+	border-top: 2px solid #FAB200;
+	border-right: 2px solid #3D95FF;
+	border-bottom: 2px solid #B2172F;
+	border-left: 2px solid #1FC208;
+	border-radius: 5px;
+	box-shadow: 2px 2px 2px #ccc
+}
+
+#cubeFrame, #cubeHelp, #cubeRank, #cubeMenu {
+	width: 290px; /* 游戏实际宽度 290px */
+}
+
+#cubeReel {
+	width: 1160px;
+	position: absolute;
+	top: 0;
+	left: -580px; /* 默认菜单位置 */
+}
+#cubeHelp, #cubeRank, #cubeMenu, #cubeGame {
+	float: left;
+}
+
+button, .button {
+	cursor: pointer;
+	border: #BFBFBF 1px solid;
+	background-color: white;
+	text-align: center;
+	font-size: 14px;
+	/*background: #E0E0E0;
+	background: -moz-linear-gradient(top, #FEFEFE 0%, #E0E0E0 100%);
+	background: -webkit-linear-gradient(top, #FEFEFE 0%, #E0E0E0 100%);
+	background: -o-linear-gradient(top, #FEFEFE 0%, #E0E0E0 100%);*/
+	border-radius: 2px;
+	box-shadow: 1px 1px 2px #ccc;
+	
+	user-select: none;
+	-moz-user-select: none;
+	-webkit-user-select: none;
+	-o-user-select: none;
+	-ms-user-select: none;
+	
+	-moz-transition-property: border-color,color;
+	-moz-transition-duration: 0.3s;
+	-webkit-transition-property: border-color,color;
+	-webkit-transition-duration: 0.3s;
+	-o-transition-property: border-color,color;
+	-o-transition-duration: 0.3s;
+	-ms-transition-property: border-color,color;
+	-ms-transition-duration: 0.3s;
+}
+button:hover, .button:hover, button.hover, .btnHover {
+	border-color: #3D95FF;
+	color: #3D95FF;
+	/*box-shadow: 0px 1px 2px #ccc;*/
+	
+	-moz-transition-property: border-color,color;
+	-moz-transition-duration: 0.3s;
+	-webkit-transition-property: border-color,color;
+	-webkit-transition-duration: 0.3s;
+	-o-transition-property: border-color,color;
+	-o-transition-duration: 0.3s;
+	-ms-transition-property: border-color,color;
+	-ms-transition-duration: 0.3s;
+}
+button:active, .button:active {
+	box-shadow: 1px 1px 1px #ccc inset;
+}
+
+input[type="text"] {
+	border: 1px solid #cccccc;
+	border-radius: 3px;
+}
+
+#cubeBrowser #browserList {
+	float: left;
+	margin-top: 10px;
+	margin-left: 20px;
+	width: 250px;
+}
+
+#cubeBrowser #browserList ul {
+	
+}
+#cubeBrowser #browserList ul li {
+	float: left;
+}
+#cubeBrowser #browserList ul li a {
+	display: block;
+	margin: 2px 0;
+	padding: 1px 0 1px 40px;
+	height: 32px;
+	line-height: 32px;
+	font-size: 24px;
+	text-decoration: none;
+	color: black;
+	border-bottom: 1px white solid;
+}
+#cubeBrowser #browserList ul li.firefox a {
+	background: url('../imgs/firefox-32.png') left center no-repeat;
+}
+#cubeBrowser #browserList ul li.firefox a:hover {
+	color: #B2172F;
+	border-bottom: 1px #B2172F solid;
+}
+#cubeBrowser #browserList ul li.chrome a {
+	background: url('../imgs/chrome-32.png') left center no-repeat;
+}
+#cubeBrowser #browserList ul li.chrome a:hover {
+	color: #FAB200;
+	border-bottom: 1px #FAB200 solid;
+}
+#cubeBrowser #browserList ul li.ie a {
+	background: url('../imgs/ie-32.png') left center no-repeat;
+}
+#cubeBrowser #browserList ul li.ie a:hover {
+	color: #3D95FF;
+	border-bottom: 1px #3D95FF solid;
+}
+#cubeBrowser #browserList ul li.opera a {
+	background: url('../imgs/opera-32.png') left center no-repeat;
+}
+#cubeBrowser #browserList ul li.opera a:hover {
+	color: red;
+	border-bottom: 1px red solid;
+}
+#cubeBrowser #browserList ul li.safari a {
+	background: url('../imgs/safari-32.png') left center no-repeat;
+}
+#cubeBrowser #browserList ul li.safari a:hover {
+	color: #666;
+	border-bottom: 1px #666 solid;
+}
+#cubeBrowser #browserList ul li a:hover {
+	background-position: left 0;
+}
+
+#cubeMenu header, #cubeBrowser #header {
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+	padding-left: 26px;
+	background: url('../imgs/logo-left.png') center left no-repeat;
+	
+	color: #3D95FF;
+	text-shadow: 1px 1px 2px #ccc;
+	height: 64px;
+	line-height: 78px;
+}
+#cubeMenu header h1, #cubeBrowser #header h1 {
+	font-size: 42px;
+	padding-right: 38px;
+	background: url('../imgs/logo-right.png') right 22px no-repeat;
+}
+
+#cubeMenu #menuLoading {
+	float: right;
+	margin-top: 50px;
+	margin-bottom: 250px;
+	margin-right: 20px;
+	padding-left: 20px;
+	width: 200px;
+	height: 16px;
+	line-height: 16px;
+	background: url('../imgs/loading-circle.png') center left no-repeat;
+}
+
+#cubeMenu #menuControl {
+	float: right;
+	margin-top: 18px;
+	margin-right: 20px;
+}
+#cubeMenu #menuControl button, #cubeMenu #menuControl .button {
+	display: block;
+	width: 180px;
+	height: 40px;
+	line-height: 40px;
+	margin: 12px 0;
+}
+#cubeMenu #menuControl #btnRed {
+	border: #B2172F 1px solid;
+}
+#cubeMenu #menuControl #btnRed:hover, #cubeMenu #menuControl #btnRed.hover {
+	border: #F4B3AB 1px solid;
+	color: #B2172F;
+}
+#cubeMenu #menuControl #btnGreen {
+	border: #328337 1px solid;
+}
+#cubeMenu #menuControl #btnGreen:hover, #cubeMenu #menuControl #btnGreen.hover {
+	border: #1FC208 1px solid;
+	color: #328337;
+}
+#cubeMenu #menuControl #btnYellow {
+	border: #FAB200 1px solid;
+}
+#cubeMenu #menuControl #btnYellow:hover, #cubeMenu #menuControl #btnYellow.hover {
+	border: #EBCF71 1px solid;
+	color: #FAB200;
+}
+
+#cubeHelp h1, #cubeRank h1 {
+	float: left;
+	margin-top: 10px;
+	margin-left: 10px;
+	padding-left: 64px;
+	background: url('../imgs/logo.png') center left no-repeat;
+	
+	color: #3D95FF;
+	font-size: 42px;
+	text-shadow: 1px 1px 2px #ccc;
+	height: 64px;
+	line-height: 78px;
+}
+#cubeHelp #helpContent {
+	margin-top: 90px;
+	height: 210px;
+}
+#cubeRank #rankList {
+	height: 190px;
+}
+
+#cubeHelp #helpContent, #cubeRank #rankNav, #cubeRank #rankList {
+	margin-left: 15px;
+	margin-right: 15px;
+}
+#cubeHelp #helpContent, #cubeRank #rankList {
+	padding: 4px;
+	overflow: auto;
+	font-size: 14px;
+	border: 1px solid #BFBFBF;
+	border-radius: 2px;
+	box-shadow: 1px 1px 2px #ccc inset;
+}
+#cubeHelp #helpControl, #cubeRank #rankControl {
+	/*float: right;*/
+	margin-top: 10px;
+	margin-left: 15px;
+	margin-right: 15px;
+}
+#cubeHelp #helpControl #helpInfo, #cubeRank #rankControl #rankInfo {
+	float: left;
+	font-size: 12px;
+	width: 150px;
+}
+#cubeHelp #helpControl button, #cubeHelp #helpControl .button, #cubeRank #rankControl button, #cubeRank #rankControl .button {
+	width: 90px;
+	height: 40px;
+	line-height: 40px;
+	float: right;
+}
+#cubeRank #rankList ul li {
+	height: 34px;
+	padding: 2px 0;
+	font-size: 16px;
+}
+#cubeRank #rankList ul li .name, #cubeRank #rankList ul li .result {
+	height: 17px;
+}
+#cubeRank #rankList ul li .name {
+	font-weight: bold;
+	position: relative;
+	white-space: nowrap;
+	overflow: hidden;
+}
+#cubeRank #rankList ul li .gameRank {
+	position: absolute;
+	top: 0;
+	right: 0;
+	padding-left: 0.5em;
+	background-color: white;
+}
+#cubeRank #rankList ul li .result {
+	text-align: right;
+}
+#cubeRank #rankList ul li input.inputName {
+	width: 100px;
+}
+
+#cubeRank #rankNav {
+	margin-top: 85px;
+	margin-bottom: 2px;
+	height: 18px;
+	line-height: 18px;
+}
+#cubeRank a.linkBtn {
+	color: #3D95FF;
+	text-decoration: none;
+}
+#cubeRank #rankNav a.selected {
+	color: black;
+}
+#cubeRank #rankList ul li .btnNameSub {
+	margin-left: 10px;
+}
+
+
+#footer {
+	width: 290px; /* 游戏实际宽度 290px */
+	margin: 10px auto;
+	color: #666666;
+	text-align: right;
+	font-size: 10px;
+	border: 1px solid #dedede;
+	border-radius: 5px;
+	box-shadow: 0 0 2px #ccc
+}
+#footer * {
+	padding: 8px 15px;
+}
+#footer * * {
+	padding: 0;
+}
+#footer a {
+	color: #666666;
+}
+#footer a:hover {
+	color: #3D95FF;
+}
+
+@font-face {
+	font-family: Ubuntu;
+	font-style: normal;
+	font-weight: normal;
+	src: url('../imgs/ubuntu.ttf');
+}
